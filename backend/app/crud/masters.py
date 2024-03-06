@@ -1,7 +1,7 @@
 from backend.app.schemas.master import MastersSchema
 from backend.app.schemas.record import RecordSchema
 
-masters = [{"id": 1, "name": "John", "second_name": "Wall", "dad_name": "Walich"}]
+masters = [{"id": 1, "name": "John", "second_name": "Wall", "sur_name": "Walich"}]
 
 
 async def get_masters_service() -> list:

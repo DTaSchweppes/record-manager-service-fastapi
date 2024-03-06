@@ -6,4 +6,4 @@ class MastersSchema(BaseModel):
     id: Optional[int] = Field(..., description="master id")
     name: Optional[str] = Field(..., description="Name")
     second_name: Optional[str] = Field(..., description="Second name")
-    sur_name: Optional[str] = Field(..., description="Surname ")
+    sur_ame: Optional[str] = Field(..., description="Surname ")
