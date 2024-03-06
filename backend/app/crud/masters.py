@@ -1,3 +1,4 @@
+from backend.app.schemas.master import MastersSchema
 from backend.app.schemas.record import RecordSchema
 
 masters = [{"id": 1, "name": "John", "second_name": "Wall", "dad_name": "Walich"}]
@@ -13,6 +14,6 @@ async def get_master_by_id_service(master_id: int) -> dict:
             return master
 
 
-async def create_master_service(record: RecordSchema) -> dict:
-    masters.append(record.dict())
-    return record.dict()
+async def create_master_service(master: MastersSchema) -> dict:
+    masters.append(master.dict())
+    return master.dict()
