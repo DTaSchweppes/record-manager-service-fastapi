@@ -1,5 +1,7 @@
+import os
 from functools import lru_cache
 
+from pydantic import PostgresDsn
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -9,6 +11,7 @@ class Settings(BaseSettings):
     API_V1_STR: str = '/api/v1'
     TITLE: str = 'Record Manager'
     VERSION: str = '0.0.1'
+    ASYNCPG_URL: PostgresDsn = os.getenv("SQL_URL")
     DESCRIPTION: str = 'Record Manager service'
     DOCS_URL: str | None = f'{API_V1_STR}/docs'
     REDOCS_URL: str | None = f'{API_V1_STR}/redocs'
