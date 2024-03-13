@@ -70,3 +70,4 @@ class Base(DeclarativeBase):
                 ) from exception
         finally:
             await db.close()
+

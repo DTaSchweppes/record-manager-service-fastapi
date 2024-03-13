@@ -12,7 +12,6 @@ from backend.app.models.base import Base
 class Master(Base):
     id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), default=uuid.uuid4, primary_key=True)
     email: Mapped[str] = mapped_column(String, nullable=False, unique=True)
-    phone_number: Mapped[str] = mapped_column(String, nullable=False, unique=True)
     first_name: Mapped[str] = mapped_column(String, nullable=False)
     last_name: Mapped[str] = mapped_column(String, nullable=False)
     surname: Mapped[str] = mapped_column(String, nullable=False)

@@ -7,7 +7,7 @@ from backend.app.core.conf import settings as global_settings
 
 
 engine = create_async_engine(
-    global_settings.asyncpg_url.unicode_string(),
+    global_settings.ASYNCPG_URL.unicode_string(),
     future=True,
     echo=True,
 )
